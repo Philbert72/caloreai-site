@@ -1,0 +1,110 @@
+/* Calore — shared styles for the public pages.
+   Palette matches lib/core/theme/app_colors.dart so the site and the app
+   look like the same product. */
+:root {
+  --forest: #0c3c26;
+  --lime: #a1d845;
+  --sun: #ffda1f;
+  --background: #f7f4ec;
+  --surface: #ffffff;
+  --text-secondary: #5b6b60;
+  --border: #e3ded2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 24px 96px;
+  background: var(--background);
+  color: var(--forest);
+  font: 17px/1.65 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+main { max-width: 680px; margin: 0 auto; }
+
+header {
+  padding: 56px 0 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+.wordmark {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--forest);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--sun);
+}
+
+h1 { font-size: 34px; line-height: 1.2; margin: 28px 0 8px; }
+h2 { font-size: 21px; margin: 40px 0 10px; }
+p, li { color: var(--text-secondary); }
+p { margin: 0 0 16px; }
+ul { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+strong { color: var(--forest); }
+a { color: var(--forest); text-decoration-color: var(--lime); text-underline-offset: 3px; }
+
+.updated { font-size: 15px; color: var(--text-secondary); margin: 0 0 8px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px 26px;
+  margin: 24px 0;
+}
+
+.card h2 { margin-top: 0; }
+
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 14px;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--forest);
+  font-weight: 800;
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+}
+
+.email {
+  display: inline-block;
+  font-weight: 700;
+  background: var(--sun);
+  color: var(--forest);
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 520px) {
+  h1 { font-size: 28px; }
+  body { padding: 0 18px 72px; }
+}
