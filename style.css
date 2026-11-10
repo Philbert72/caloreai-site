@@ -1,6 +1,7 @@
-/* Calore — shared styles for the public pages.
-   Palette matches lib/core/theme/app_colors.dart so the site and the app
-   look like the same product. */
+/* Calore: shared styles for the public pages.
+   Palette and type follow the brand guide, so the site and the app read as
+   one product. Baloo 2 for headlines, Nunito for body. */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap');
 :root {
   --forest: #0c3c26;
   --lime: #a1d845;
@@ -18,7 +19,7 @@ body {
   padding: 0 24px 96px;
   background: var(--background);
   color: var(--forest);
-  font: 17px/1.65 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, Segoe UI, sans-serif;
+  font: 400 17px/1.7 Nunito, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 main { max-width: 680px; margin: 0 auto; }
@@ -29,21 +30,12 @@ header {
   margin-bottom: 40px;
 }
 
-.wordmark {
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--forest);
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: var(--sun);
-}
+.wordmark { display: inline-block; line-height: 0; }
+.wordmark img { height: 30px; width: auto; }
 
-h1 { font-size: 34px; line-height: 1.2; margin: 28px 0 8px; }
-h2 { font-size: 21px; margin: 40px 0 10px; }
+h1, h2 { font-family: "Baloo 2", Nunito, system-ui, sans-serif; }
+h1 { font-size: 38px; font-weight: 800; line-height: 1.15; margin: 28px 0 8px; }
+h2 { font-size: 23px; font-weight: 700; margin: 40px 0 10px; }
 p, li { color: var(--text-secondary); }
 p { margin: 0 0 16px; }
 ul { margin: 0 0 16px; padding-left: 22px; }
@@ -80,8 +72,9 @@ a { color: var(--forest); text-decoration-color: var(--lime); text-underline-off
   border-radius: 50%;
   background: var(--lime);
   color: var(--forest);
+  font-family: "Baloo 2", Nunito, sans-serif;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 16px;
   display: grid;
   place-items: center;
 }
@@ -107,4 +100,14 @@ footer {
 @media (max-width: 520px) {
   h1 { font-size: 28px; }
   body { padding: 0 18px 72px; }
+}
+
+/* Language switch. Both markets get their own page rather than a translation,
+   so the link names the language in that language. */
+.lang {
+  float: right;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-secondary);
 }
