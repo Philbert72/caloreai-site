@@ -3,8 +3,10 @@
 The public pages for **Calore**, the meal-scanning nutrition app.
 
 ```
-privacy/          caloreai.app/privacy
-delete-account/   caloreai.app/delete-account
+privacy/          caloreai.app/privacy          (Indonesian: privasi/)
+terms/            caloreai.app/terms            (Indonesian: ketentuan/)
+delete-account/   caloreai.app/delete-account   (Indonesian: hapus-akun/)
+feedback/         caloreai.app/feedback         (Indonesian: feedback/id/)
 ```
 
 Both stores require a privacy policy URL, and Google Play specifically
